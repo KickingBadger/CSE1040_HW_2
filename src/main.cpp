@@ -19,7 +19,5 @@ using namespace std;
 
 int main () {
 
-	Student Justin;
-	
 	return 0;
 };
