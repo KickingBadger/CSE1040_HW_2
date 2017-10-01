@@ -7,10 +7,15 @@ using namespace std;
 		private:
 		int Id;
 		string Name;
-		enum Classification {Freshman, Sophomore, Junior, Senior}; //FIXME:Maybe change me to an array?
-		
+		enum Standing {Freshman, Sophomore, Junior, Senior}; //FIXME:Maybe change me to an array?
+		Standing standing;
+
 		public:
-		Student();
+		Student(int Id, string Name, Standing standing);
 		int getId() {return Id;}
-		void setId(int x) {Id = x;}
+		void setId(int newId) {Id = newId;}
+		string getName() {return Name;}
+		void setName(string newName) {Name = newName;}
+		Standing getStanding() {return standing;}
+		void setStanding(Standing newStanding) {standing = newStanding;}
 	};
