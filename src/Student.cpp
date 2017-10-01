@@ -1,10 +1,14 @@
 #include <iostream>
+#include "Student.h"
 
 using namespace std;
 
-#include "Student.h"
+Student::Student() {//Default Constructor
 
-Student::Student(int newId, string newName, Standing newstanding) {
-	Id = 0;
-	Name = "";
+}
+
+Student::Student(int newId, string newName, int newStanding) {//Constructor if you know all the info about a new Course
+	Id = newId;
+	Name = newName;
+	Standing = newStanding;
 }

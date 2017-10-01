@@ -19,5 +19,17 @@ using namespace std;
 
 int main () {
 
+	int temp;
+
+	Enrollment Student1(1, 2417599, 1200);
+
+	cout << Student1.getId() << endl;
+	cout << Student1.getStudentId() << endl;
+	cout << Student1.getCourseId() << endl;
+
+
+	cin >> temp;
+
+
 	return 0;
 };
