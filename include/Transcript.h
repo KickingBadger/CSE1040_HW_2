@@ -1,6 +1,7 @@
 #include <iostream>
-#include <string>
-#include <vector>
+#include <list>
+#include <iterator>
+#include <algorithm>
 
 #include "Enrollment.h"
 
@@ -8,7 +9,10 @@ using namespace std;
 
 	class Transcript {
 		private:
-		vector<Enrollment *> transcript;
+			list<Enrollment*> transcript;
+			Enrollment *enrollment_list_head;
+			Enrollment *enrollment_list_tail;
 		public:
-		
+			Transcript();
+
 	};

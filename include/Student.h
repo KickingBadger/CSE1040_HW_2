@@ -3,6 +3,8 @@
 
 using namespace std;
 
+	class StudentBody;
+
 	class Student {
 		private:
 			int Id;
@@ -10,6 +12,8 @@ using namespace std;
 			//enum Standing {Freshman, Sophomore, Junior, Senior}; //FIXME:Maybe change me to an array?
 			int Standing;
 
+			Student *next;
+			Student *prev;
 
 		public:
 			Student();
@@ -18,6 +22,11 @@ using namespace std;
 			void setId(int newId) {Id = newId;}
 			string getName() {return Name;}
 			void setName(string newName) {Name = newName;}
-			int getStanding() {return Standing;}
+			string getStanding();
 			void setStanding(int newStanding) {Standing = newStanding;}
+
+			Student* getNext() {return next;}
+			void setNext(Student* nextStudent) {next = nextStudent;}
+			Student* getPrev() {return prev;}
+			void setPrev(Student* prevStudent) {prev = prevStudent;}
 	};

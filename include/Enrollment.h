@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <string>
 
 using namespace std;
+
+	class Transcript;
 
 	class Enrollment {
 		private:
@@ -13,11 +14,15 @@ using namespace std;
 			double Average;
 			char letterGrade;
 
+			Enrollment *next;
+			Enrollment *prev;
+
 			void calcAverage();
 			void setLetterGrade();
+
 		public:
 			Enrollment();
-			Enrollment(int Id, int stuId, int courId);
+			Enrollment(int Id, int stuId, int courId, Transcript* tran);
 			int getId() {return Id;}
 			void setId(int newId) {Id = newId;}
 			int getStudentId() {return studentId;}
@@ -29,4 +34,9 @@ using namespace std;
 			void setGrade(int i, int newGrade);
 			double getAverage() {return Average;}
 			char getLetterGrade() {return letterGrade;}
+
+			Enrollment* getNext() {return next;}
+			void setNext(Enrollment* nextEnrollment) {next = nextEnrollment;}
+			Enrollment* getPrev() {return prev;}
+			void setPrevEnrollment(Enrollment* prevEnrollment) {prev = prevEnrollment;}
 	};

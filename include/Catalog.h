@@ -1,6 +1,7 @@
 #include <iostream>
-#include <string>
-#include <vector>
+#include <list>
+#include <iterator>
+#include <algorithm>
 
 #include "Course.h"
 
@@ -8,7 +9,10 @@ using namespace std;
 
 	class Catalog {
 		private:
-		vector<Course *> catalog;
+			list<Course*> catalog;
+			Course *course_list_head;
+			Course *course_list_tail;
 		public:
-		
+			Catalog();
+
 	};

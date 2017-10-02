@@ -12,3 +12,21 @@ Student::Student(int newId, string newName, int newStanding) {//Constructor if y
 	Name = newName;
 	Standing = newStanding;
 }
+
+string Student::getStanding() {
+	if (Standing == 1) {
+		return "Freshman";
+	}
+	else if (Standing == 2) {
+		return "Sophomore";
+	}
+	else if (Standing == 3) {
+		return "Junior";
+	}
+	else if (Standing == 4) {
+		return "Senior";
+	}
+	else {
+		return "Invalid Standing.";
+	}
+}

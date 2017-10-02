@@ -3,6 +3,8 @@
 
 using namespace std;
 
+	class Catalog;
+
 	class Course {
 		private:
 			int Id;
@@ -11,9 +13,12 @@ using namespace std;
 			string startTime;
 			string endTime;
 
+			Course *next;
+			Course *prev;
+
 		public:
 			Course();
-			Course(int Id, string Name, pair<string, int>(Location), string startTime, string endTime);
+			Course(int Id, string Name, pair<string, int>(Location), string startTime, string endTime, Catalog* ctlg);
 			int getId() {return Id;}
 			void setId(int newId) {Id = newId;}
 			string getName() {return Name;}
@@ -24,4 +29,9 @@ using namespace std;
 			void setStartTime(string newStartTime) {startTime = newStartTime;}
 			string getEndTime() {return endTime;}
 			void setEndTime(string newEndTime) {endTime = newEndTime;}
+
+			Course* getNext() {return next;}
+			void setNext(Course* nextCourse) {next = nextCourse;}
+			Course* getPrev() {return prev;}
+			void setPrevCourse(Course* prevCourse) {prev = prevCourse;}
 	};
