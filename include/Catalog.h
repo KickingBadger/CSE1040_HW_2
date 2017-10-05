@@ -14,5 +14,14 @@ using namespace std;
 			Course *course_list_tail;
 		public:
 			Catalog();
+			list<Course*>::iterator getHead() {return catalog.begin();}
+			Course* getFront() {return catalog.front();}
+			list<Course*>::iterator getTail() {return catalog.end();}
+			Course* getBack() {return catalog.back();}
 
+			void addCourse();
+			void removeCourse();
+			void printCourses();
+			int getSize() {return catalog.size();}
+			bool isEmpty() {return catalog.empty();}
 	};

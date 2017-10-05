@@ -18,7 +18,7 @@ using namespace std;
 
 		public:
 			Course();
-			Course(int Id, string Name, pair<string, int>(Location), string startTime, string endTime, Catalog* ctlg);
+			Course(int Id, string Name, pair<string, int>(Location), string startTime, string endTime);
 			int getId() {return Id;}
 			void setId(int newId) {Id = newId;}
 			string getName() {return Name;}
@@ -33,5 +33,5 @@ using namespace std;
 			Course* getNext() {return next;}
 			void setNext(Course* nextCourse) {next = nextCourse;}
 			Course* getPrev() {return prev;}
-			void setPrevCourse(Course* prevCourse) {prev = prevCourse;}
+			void setPrev(Course* prevCourse) {prev = prevCourse;}
 	};

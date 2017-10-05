@@ -7,7 +7,7 @@ Course::Course() {//Default Constructor
 
 }
 
-Course::Course(int newId, string newName, pair<string, int>(newLocation), string newStartTime, string newEndTime, Catalog* ctlg) {//Constructor if you know all the info about a new Course
+Course::Course(int newId, string newName, pair<string, int>(newLocation), string newStartTime, string newEndTime) {//Constructor if you know all the info about a new Course
   Id = newId;
   Name = newName;
   Location.first = newLocation.first;

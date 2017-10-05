@@ -18,15 +18,15 @@ void courseMenu(Catalog * ctlg) {
 
 	cout << "What would you like to do?" << endl;
 	cout << "1 - Create a Course" << endl;
-	cout << "2 - View Courses" << endl;
-	cout << "3 - View Course Enrollment" << endl;
+	cout << "2 - View Catalog" << endl;
+	cout << "3 - View Enrollment" << endl;
 	cout << "0 - Return to Previous Menu" << endl;
 
 	cin >> choice;
 
 	switch(choice) {
-		case 1: break;
-		case 2: break;
+		case 1: ctlg->addCourse(); break;
+		case 2: ctlg->printCourses(); break;
 		case 3: break;
 		case 0: return;
 	}
