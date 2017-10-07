@@ -17,9 +17,9 @@ using namespace std;
 			list<Student*>::iterator getTail() {return studentBody.end();}
 			Student* getBack() {return studentBody.back();}
 
-			void addStudent(StudentBody* stuBod);
+			void addStudent();
 			void removeStudent();
-			void printStudents(StudentBody* stuBod);
+			void printStudents();
 			int getSize() {return studentBody.size();}
 			bool isEmpty() {return studentBody.empty();}
 	};

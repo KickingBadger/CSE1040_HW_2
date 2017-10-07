@@ -10,7 +10,7 @@ StudentBody::StudentBody() {
 
 }
 
-void StudentBody::addStudent(StudentBody* stuBod){
+void StudentBody::addStudent(){
   int tempId;
   string tempString;
   int tempStand;
@@ -41,7 +41,7 @@ void StudentBody::addStudent(StudentBody* stuBod){
   cout << " with Id: " << newStudent->getId() << " and current standing of " << newStudent->getStanding() <<  "." << endl;
 }
 
-void StudentBody::printStudents(StudentBody* stuBod) {
+void StudentBody::printStudents() {
 
   cout << setw(8) << "Name" << setw(12) << "Id" << setw(12) << "Standing" << endl;
   cout << "---------------------------------" << endl;
