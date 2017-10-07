@@ -10,9 +10,18 @@ using namespace std;
 	class Transcript {
 		private:
 			list<Enrollment*> transcript;
-			Enrollment *enrollment_list_head;
-			Enrollment *enrollment_list_tail;
 		public:
 			Transcript();
+			list<Enrollment*>::iterator getHead() {return transcript.begin();}
+			Enrollment* getFront() {return transcript.front();}
+			list<Enrollment*>::iterator getTail() {return transcript.end();}
+			Enrollment* getBack() {return transcript.back();}
+
+			void enrollStudent();
+			void unenrollStudent();
+			void printEnrollments();
+
+			int getSize() {return transcript.size();}
+			bool isEmpty() {return transcript.empty();}
 
 	};
