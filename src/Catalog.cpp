@@ -63,3 +63,11 @@ void Catalog::printCourses() {
       cout << " |" << setw(6) << (*it)->getStartTime() << " - " <<  setw(4) << (*it)->getEndTime() << endl;
     }
 }
+
+Course* Catalog::getCourse(int courseId) {
+   list<Course*>::iterator it;
+
+    for(it = catalog.begin(); it != catalog.end(); ++it) {
+
+    }
+}

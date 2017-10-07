@@ -22,6 +22,9 @@ using namespace std;
 			void addCourse();
 			void removeCourse();
 			void printCourses();
+
+			Course* getCourse(int courseId);
+
 			int getSize() {return catalog.size();}
 			bool isEmpty() {return catalog.empty();}
 	};
