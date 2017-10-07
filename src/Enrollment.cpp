@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 #include "Enrollment.h"
 
 using namespace std;
@@ -7,10 +9,21 @@ Enrollment::Enrollment() {
 
 }
 
-Enrollment::Enrollment(int newId, int newStuId, int newCourId, Transcript* tran) {
-  Id = newId;
+Enrollment::Enrollment(int newStuId, int newCourId) {
+  Id = generateId();
   studentId = newStuId;
   courseId = newCourId;
+}
+
+int Enrollment::generateId() {
+    int newId;
+
+    srand(time(NULL));
+
+    newId = rand() % 100000000 + 10000000;
+    cout << newId;
+
+    return newId;
 }
 
 void Enrollment::addGrade(int Grade) {
@@ -33,8 +46,10 @@ int Enrollment::getGrade(int i) {
   if (Grades.size() != 0) {
     return Grades.at(i);
   }
-
-  cout << "No Grades for this student in this class." << endl;
+  else {
+    cout << "No Grades for this student in this class." << endl;
+    return -1;
+  }
 
 }
 

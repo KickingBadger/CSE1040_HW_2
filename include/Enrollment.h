@@ -17,12 +17,13 @@ using namespace std;
 			Enrollment *next;
 			Enrollment *prev;
 
+			int generateId();
 			void calcAverage();
 			void setLetterGrade();
 
 		public:
 			Enrollment();
-			Enrollment(int Id, int stuId, int courId, Transcript* tran);
+			Enrollment(int stuId, int courId);
 			int getId() {return Id;}
 			void setId(int newId) {Id = newId;}
 			int getStudentId() {return studentId;}
@@ -38,5 +39,5 @@ using namespace std;
 			Enrollment* getNext() {return next;}
 			void setNext(Enrollment* nextEnrollment) {next = nextEnrollment;}
 			Enrollment* getPrev() {return prev;}
-			void setPrevEnrollment(Enrollment* prevEnrollment) {prev = prevEnrollment;}
+			void setPrev(Enrollment* prevEnrollment) {prev = prevEnrollment;}
 	};
