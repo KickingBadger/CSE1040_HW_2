@@ -33,7 +33,7 @@ int main () {
 
 		cout << endl;
 		cout << "Which action would you like to take?" << endl;
-		cout << "1 - Manage Courses\n2 - Manage Students\n3 - Manage Transcripts\n4 - View Averages\n5 - Save/Load a Database\n0 - Quit Application" << endl;
+		cout << "1 - Manage Courses\n2 - Manage Students\n3 - Manage Grades/Transcripts\n4 - View Averages\n5 - Save/Load a Database\n0 - Quit Application" << endl;
 		cin >> selection;
 
 		switch(selection) {

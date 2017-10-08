@@ -33,9 +33,9 @@ using namespace std;
 			void setStudentId(int newId) {studentId = newId;}
 			int getCourseId() {return courseId;}
 			void setCourseId(int newId) {courseId = newId;}
+
 			void addGrade(int Grade);
-			int getGrade(int i);
-			void setGrade(int i, int newGrade);
+			vector<int>* getGrade() {return &Grades;}
 			double getAverage() {return Average;}
 			char getLetterGrade() {return letterGrade;}
 

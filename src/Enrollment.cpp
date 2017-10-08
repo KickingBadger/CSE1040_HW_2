@@ -13,6 +13,10 @@ Enrollment::Enrollment(int newStuId, int newCourId) {
   Id = generateId();
   studentId = newStuId;
   courseId = newCourId;
+  next = NULL;
+  prev = NULL;
+  Average = 0;
+  letterGrade = 'x';
 }
 
 int Enrollment::generateId() {
@@ -40,41 +44,10 @@ void Enrollment::addGrade(int Grade) {
   return;
 }
 
-int Enrollment::getGrade(int i) {
-
-  if (Grades.size() != 0) {
-    return Grades.at(i);
-  }
-  else {
-    cout << "No Grades for this student in this class." << endl;
-    return -1;
-  }
-
-}
-
-void Enrollment::setGrade(int i, int Grade) {
-
-  if (Grades.size() == 0) {
-    cout << "No Grades for this student in this class." << endl;
-    return;
-  }
-
-  if (!Grades.at(i)) {
-    cout << "No grade to change, try adding a grade first." << endl;
-    return;
-  }
-
-  Grades.at(i) = Grade;
-
-  calcAverage();
-
-  return;
-}
-
 void Enrollment::calcAverage() {
   int temp = 0;
 
-  for (int i =0; i < Grades.size(); ++i) {
+  for (unsigned int i =0; i < Grades.size(); ++i) {
     temp = temp + Grades.at(i);
   }
 

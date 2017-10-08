@@ -14,4 +14,6 @@ Course::Course(int newId, string newName, pair<string, int>(newLocation), string
   Location.second = newLocation.second;
   startTime = newStartTime;
   endTime = newEndTime;
+  next = NULL;
+  prev = NULL;
 }

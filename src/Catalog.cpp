@@ -17,7 +17,7 @@ void Catalog::addCourse() {
     string tempStart;
     string tempEnd;
 
-    cout << "Pleasae enter the Course's name: " << endl;
+    cout << "Please enter the Course's name: " << endl;
     cin >> tempString;
 
     cout << "Please enter the Course's Id: " << endl;
@@ -35,14 +35,14 @@ void Catalog::addCourse() {
       newCourse->setNext(NULL);
       newCourse->setPrev(NULL);
 
-      catalog.insert(catalog.end(), newCourse);
+      catalog.push_back(newCourse);
     }
     else if (!catalog.empty()) {
       newCourse->setNext(NULL);
       newCourse->setPrev(catalog.back());
       catalog.back()->setNext(newCourse);
 
-      catalog.insert(catalog.end(), newCourse);
+      catalog.push_back(newCourse);
     }
 
     cout << "Successfully added " << newCourse->getName() << " to the Catalog" << endl;
@@ -71,8 +71,6 @@ Course* Catalog::getCourse(int courseId) {
         if((*it)->getId() == courseId) {
             return (*it);
         }
-        else {
-            return NULL;
-        }
     }
+    return NULL;
 }

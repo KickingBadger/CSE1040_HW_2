@@ -11,6 +11,8 @@ Student::Student(int newId, string newName, int newStanding) {//Constructor if y
 	Id = newId;
 	Name = newName;
 	Standing = newStanding;
+	next = NULL;
+	prev = NULL;
 }
 
 string Student::getStanding() {

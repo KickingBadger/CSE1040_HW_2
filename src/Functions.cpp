@@ -20,7 +20,6 @@ void courseMenu(Catalog * ctlg) {
 	cout << "What would you like to do?" << endl;
 	cout << "1 - Create a Course" << endl;
 	cout << "2 - View Catalog" << endl;
-	cout << "3 - View Enrollment" << endl;
 	cout << "0 - Return to Previous Menu" << endl;
 
 	cin >> choice;
@@ -28,7 +27,6 @@ void courseMenu(Catalog * ctlg) {
 	switch(choice) {
 		case 1: ctlg->addCourse(); break;
 		case 2: ctlg->printCourses(); break;
-		case 3: break;
 		case 0: return;
 	}
 }
@@ -62,14 +60,16 @@ void transcriptMenu(StudentBody * stuBod, Catalog * ctlg, Transcript * tran) {
 	cout << "1 - Enroll a Student" << endl;
 	cout << "2 - Enter a Grade" << endl;
 	cout << "3 - Print Grades" << endl;
+    cout << "4 - View Class Enrollments" << endl;
 	cout << "0 - Return to Previous Menu" << endl;
 
 	cin >> choice;
 
 	switch(choice) {
 		case 1: tran->enrollStudent(stuBod, ctlg); break;
-		case 2: tran->addGrade(); break;
-		case 3: tran->printEnrollments(); break;
+		case 2: tran->addGrade(stuBod, ctlg); break;
+		case 3: tran->viewGrades(); break;
+        case 4: tran->printEnrollments(stuBod); break;
 		case 0: return;
 	}
 }
@@ -87,8 +87,8 @@ void reportMenu(StudentBody * stuBod, Catalog * ctlg, Transcript * tran) {
 	cin >> choice;
 
 	switch(choice) {
-		case 1: break;
-		case 2: break;
+		case 1: tran->viewStudentAverage(); break;
+		case 2: tran->viewCourseAverage(ctlg); break;
 		case 0: return;
 	}
 }

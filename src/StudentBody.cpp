@@ -15,7 +15,7 @@ void StudentBody::addStudent(){
   string tempString;
   int tempStand;
 
-  cout << "Pleasae enter the student's name: " << endl;
+  cout << "Please enter the student's name: " << endl;
   cin >> tempString;
 
   cout << "Please enter the student's Id and current standing(as an integer from 1-4): " << endl;
@@ -27,18 +27,18 @@ void StudentBody::addStudent(){
     newStudent->setNext(NULL);
     newStudent->setPrev(NULL);
 
-    studentBody.insert(studentBody.end(), newStudent);
+    studentBody.push_back(newStudent);
   }
   else if (!studentBody.empty()) {
     newStudent->setNext(NULL);
     newStudent->setPrev(studentBody.back());
     studentBody.back()->setNext(newStudent);
 
-    studentBody.insert(studentBody.end(), newStudent);
+    studentBody.push_back(newStudent);
   }
 
   cout << "Successfully added " << newStudent->getName() << " to the database" << endl;
-  cout << " with Id: " << newStudent->getId() << " and current standing of " << newStudent->getStanding() <<  "." << endl;
+  cout << "with Id: " << newStudent->getId() << " and current standing of " << newStudent->getStanding() <<  "." << endl;
 }
 
 void StudentBody::printStudents() {
@@ -61,8 +61,6 @@ Student* StudentBody::getStudent(int studentId) {
         if((*it)->getId() == studentId) {
             return (*it);
         }
-        else {
-            return NULL;
-        }
     }
+    return NULL;
 }

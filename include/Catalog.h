@@ -13,8 +13,6 @@ using namespace std;
 	class Catalog {
 		private:
 			list<Course*> catalog;
-			Course *course_list_head;
-			Course *course_list_tail;
 		public:
 			Catalog();
 			list<Course*>::iterator getHead() {return catalog.begin();}
