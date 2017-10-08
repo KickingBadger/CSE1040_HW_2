@@ -68,6 +68,11 @@ Course* Catalog::getCourse(int courseId) {
    list<Course*>::iterator it;
 
     for(it = catalog.begin(); it != catalog.end(); ++it) {
-
+        if((*it)->getId() == courseId) {
+            return (*it);
+        }
+        else {
+            return NULL;
+        }
     }
 }

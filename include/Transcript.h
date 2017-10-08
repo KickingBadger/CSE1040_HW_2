@@ -4,8 +4,13 @@
 #include <algorithm>
 
 #include "Enrollment.h"
+#include "StudentBody.h"
+#include "Catalog.h"
 
 using namespace std;
+
+#ifndef TRANSCRIPT_H_
+#define TRANSCRIPT_H_
 
 	class Transcript {
 		private:
@@ -17,7 +22,8 @@ using namespace std;
 			list<Enrollment*>::iterator getTail() {return transcript.end();}
 			Enrollment* getBack() {return transcript.back();}
 
-			void enrollStudent();
+			void enrollStudent(StudentBody* stuBod, Catalog* ctlg);
+			void addGrade();
 			void unenrollStudent();
 			void printEnrollments();
 
@@ -25,3 +31,4 @@ using namespace std;
 			bool isEmpty() {return transcript.empty();}
 
 	};
+#endif

@@ -21,7 +21,6 @@ int Enrollment::generateId() {
     srand(time(NULL));
 
     newId = rand() % 100000000 + 10000000;
-    cout << newId;
 
     return newId;
 }

@@ -7,6 +7,9 @@
 
 using namespace std;
 
+#ifndef CATALOG_H_
+#define CATALOG_H_
+
 	class Catalog {
 		private:
 			list<Course*> catalog;
@@ -28,3 +31,4 @@ using namespace std;
 			int getSize() {return catalog.size();}
 			bool isEmpty() {return catalog.empty();}
 	};
+#endif

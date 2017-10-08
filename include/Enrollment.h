@@ -3,6 +3,9 @@
 
 using namespace std;
 
+#ifndef ENROLLMENT_H_
+#define ENROLLMENT_H_
+
 	class Transcript;
 
 	class Enrollment {
@@ -41,3 +44,4 @@ using namespace std;
 			Enrollment* getPrev() {return prev;}
 			void setPrev(Enrollment* prevEnrollment) {prev = prevEnrollment;}
 	};
+#endif

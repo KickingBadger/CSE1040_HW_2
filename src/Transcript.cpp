@@ -8,7 +8,7 @@ Transcript::Transcript() {
 
 }
 
-void Transcript::enrollStudent() {
+void Transcript::enrollStudent(StudentBody* stuBod, Catalog* ctlg) {
     int tempStuId;
     int tempCourId;
 
@@ -34,7 +34,7 @@ void Transcript::enrollStudent() {
       transcript.insert(transcript.end(), newEnrollment);
     }
 
-    cout << "Successfully enrolled " << newEnrollment << " in " << newEnrollment->getCourseId() << endl;
+    cout << "Successfully enrolled " << stuBod->getStudent() << " in " << newEnrollment->getCourseId() << endl;
 }
 
 void Transcript::unenrollStudent() {
@@ -42,5 +42,9 @@ void Transcript::unenrollStudent() {
 }
 
 void Transcript::printEnrollments() {
+
+}
+
+void Transcript::addGrade() {
 
 }

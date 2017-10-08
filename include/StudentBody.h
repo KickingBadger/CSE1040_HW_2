@@ -7,6 +7,9 @@
 
 using namespace std;
 
+#ifndef STUDENTBODY_H_
+#define STUDENTBODY_H_
+
 	class StudentBody {
 		private:
 			list<Student*> studentBody;
@@ -20,6 +23,10 @@ using namespace std;
 			void addStudent();
 			void removeStudent();
 			void printStudents();
+
+			Student* getStudent(int studentId);
+
 			int getSize() {return studentBody.size();}
 			bool isEmpty() {return studentBody.empty();}
 	};
+#endif

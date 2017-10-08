@@ -3,6 +3,9 @@
 
 using namespace std;
 
+#ifndef COURSE_H_
+#define COURSE_H_
+
 	class Catalog;
 
 	class Course {
@@ -35,3 +38,4 @@ using namespace std;
 			Course* getPrev() {return prev;}
 			void setPrev(Course* prevCourse) {prev = prevCourse;}
 	};
+#endif

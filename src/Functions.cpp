@@ -9,6 +9,7 @@ using namespace std;
 
   class Catalog;
   class Transcript;
+  class StudentBody;
 
 void courseMenu(Catalog * ctlg) {
 
@@ -45,8 +46,8 @@ void studentMenu(StudentBody * stuBod) {
 	cin >> choice;
 
 	switch(choice) {
-		case 1: stuBod->addStudent(stuBod); break;
-		case 2: stuBod->printStudents(stuBod); break;
+		case 1: stuBod->addStudent(); break;
+		case 2: stuBod->printStudents(); break;
 		case 0: return;
 	}
 }
@@ -66,9 +67,9 @@ void transcriptMenu(StudentBody * stuBod, Catalog * ctlg, Transcript * tran) {
 	cin >> choice;
 
 	switch(choice) {
-		case 1: break;
-		case 2: break;
-		case 3: break;
+		case 1: tran->enrollStudent(stuBod, ctlg); break;
+		case 2: tran->addGrade(); break;
+		case 3: tran->printEnrollments(); break;
 		case 0: return;
 	}
 }

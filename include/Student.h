@@ -3,6 +3,9 @@
 
 using namespace std;
 
+#ifndef STUDENT_H_
+#define STUDENT_H_
+
 	class StudentBody;
 
 	class Student {
@@ -30,3 +33,4 @@ using namespace std;
 			Student* getPrev() {return prev;}
 			void setPrev(Student* prevStudent) {prev = prevStudent;}
 	};
+#endif

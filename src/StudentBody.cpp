@@ -53,3 +53,16 @@ void StudentBody::printStudents() {
     cout << setw(8) << (*it)->getName() << " |"<< setw(10) << (*it)->getId() << " |" << setw(10) << (*it)->getStanding() << endl;
   }
 }
+
+Student* StudentBody::getStudent(int studentId) {
+   list<Student*>::iterator it;
+
+    for(it = studentBody.begin(); it != studentBody.end(); ++it) {
+        if((*it)->getId() == studentId) {
+            return (*it);
+        }
+        else {
+            return NULL;
+        }
+    }
+}
